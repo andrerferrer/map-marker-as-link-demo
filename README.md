@@ -20,4 +20,6 @@ We'll use the method [getElement()](https://docs.mapbox.com/mapbox-gl-js/api/mar
 
 Check it in [app/javascript/plugins/init_mapbox.js](app/javascript/plugins/init_mapbox.js).
 
+[Clone this repo](clone_this_repo.md) and see it working in `localhost:3000/restaurants/1`.
+
 Good Luck and Have Fun
