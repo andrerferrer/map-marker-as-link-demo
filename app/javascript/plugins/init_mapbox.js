@@ -6,6 +6,18 @@ const zoomMapToMarker = (map, marker) => {
   map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
 };
 
+const makeMarkerClickable = (marker) => {
+  const markerElement = marker.getElement(); // this gets the marker element. console.log it to see!
+  // add a nice link to go to
+  const linkToGo = `https://www.tripadvisor.com.br/Restaurant_Review-g303506-d6632629-Reviews-Amarelinho_Da_Gloria-Rio_de_Janeiro_State_of_Rio_de_Janeiro.html`;
+  // wrap the marker element in a <a> tag
+  markerElement.innerHTML = `
+    <a class='add-some-style' href='${linkToGo}'>
+        ${markerElement.innerHTML}
+    </a>
+  `;
+}
+
 const addMarkerToMap = (map) => {
   const mapElement = document.getElementById('map');
 
@@ -14,19 +26,7 @@ const addMarkerToMap = (map) => {
   .setLngLat([ markerData.lng, markerData.lat ])
   .addTo(map);
 
-
-
-  const markerElement = marker.getElement(); // this gets the marker element. console.log it to see!
-  // add a nice link to go to
-  const linkToGo = `https://www.tripadvisor.com.br/Restaurant_Review-g303506-d6632629-Reviews-Amarelinho_Da_Gloria-Rio_de_Janeiro_State_of_Rio_de_Janeiro.html`
-  // wrap the marker element in a <a> tag
-  markerElement.innerHTML = `
-    <a class='add-some-style' href='${linkToGo}'>
-        ${markerElement.innerHTML}
-    </a>
-  `
-
-
+  makeMarkerClickable(marker);
 
   zoomMapToMarker(map, markerData)
 }
