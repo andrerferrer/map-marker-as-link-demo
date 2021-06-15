@@ -18,7 +18,9 @@ If you don't know how to do it, [check how to here](https://github.com/andrerfer
 
 We'll use the method [getElement()](https://docs.mapbox.com/mapbox-gl-js/api/markers/#marker#getelement) to find the marker and add an event listener.
 
-Check it in [app/javascript/plugins/init_mapbox.js](app/javascript/plugins/init_mapbox.js).
+[Check it here](https://github.com/andrerferrer/map-marker-as-link-demo/commit/2ee3b0035e4668752fcefbb6ef5cf7a8667ea0bc) to see how it was done.
+
+Check it in [app/javascript/plugins/init_mapbox.js](app/javascript/plugins/init_mapbox.js) to see the final code.
 
 [Clone this repo](clone_this_repo.md) and see it working in `localhost:3000/restaurants/1`.
 
