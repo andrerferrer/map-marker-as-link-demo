@@ -16,7 +16,7 @@ If you don't know how to do it, [check how to here](https://github.com/andrerfer
 
 ### How to?
 
-We'll use the method [getElement()](https://docs.mapbox.com/mapbox-gl-js/api/markers/#marker#getelement) to find the marker and add an event listener.
+We'll use the method [getElement()](https://docs.mapbox.com/mapbox-gl-js/api/markers/#marker#getelement) to find the marker and wrap it up in a `<a>`.
 
 It's going to look like this:
 ```js
